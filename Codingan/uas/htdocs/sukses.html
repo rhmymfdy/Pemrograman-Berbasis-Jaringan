@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/htdocs/css/sukses.css">
+    <link rel="stylesheet" href="./css/gagal.css">
+</head>
+<body>
+
+    <section class="logika">
+        {%
+            username = _POST['username']
+            paswd = _POST['paswd']
+        
+            if(username=='rhomy' and paswd=='rhomy'):
+                emit('<section class="bungkusutama"><section class="bungkus"><h1>SUCCES LOGIN</h1><p>Thank you</p><p>Kembali ke <a href="http://localhost:4545/login.html">Login</a></p></section></section>')
+            else:
+                emit('<section class="bungkusutama"><section class="bungkus"><h1>Sorry, Login Failed</h1><p>Check your account and password</p><p>Kembali ke <a href="http://localhost:4545/login.html">Login</a></p></section></section>')
+            %}
+    </section>
+</body>
+</html>

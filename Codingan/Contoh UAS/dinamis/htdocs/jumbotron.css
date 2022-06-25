@@ -1,0 +1,21 @@
+.jumbotron {
+    background-color: #eef4f0;
+    padding: 20px;
+}
+@media (min-width: 992px) {
+    .jumbotron {
+        background-image: url('bg-cipta-nusa.jpg');
+        background-repeat: no-repeat;
+        left: 0;
+        bottom: 0;
+    }
+    .jumbotron .row {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .jumbotron .col {
+        flex: 0 0 auto;
+        width: 50%;
+        text-align: right;
+    }
+}

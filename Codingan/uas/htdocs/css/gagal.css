@@ -1,0 +1,82 @@
+html, body, div, span, applet, object, iframe,
+blockquote, pre, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body{
+    background-image: url(/img/body.jpg);
+}
+.bungkusutama{
+    background-size: 1500px;
+    background-position: center;
+    border-radius: 20px;
+    margin: 7%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.bungkus{
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    box-shadow: 0px 0px 20px grey;
+}
+.bungkus h1{
+    margin: 0px;
+    font-size: 42px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+.bungkus p{
+    font-size: 16px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}

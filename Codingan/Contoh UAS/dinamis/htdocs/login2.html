@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script lang="javascript">
+        function createRequestObject() {
+            var ro;
+            var browser = navigator.appName;
+            if(browser == "Microsoft Internet Explorer"){
+                ro = new ActiveXObject("Microsoft.XMLHTTP");
+            }else{
+                ro = new XMLHttpRequest();
+            }
+            return ro;
+        }
+
+        var http = createRequestObject();
+
+        function sndReq() {
+            http.open('POST', 'http://localhost:8080/proses_login.rpc');
+            http.onreadystatechange = handleResponse;
+            http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            var data = "username="+document.getElementById("username").value+"&paswd="+
+            document.getElementById("paswd").value;
+            http.send(data);
+        }
+
+    function handleResponse() {
+        if(http.readyState == 4){
+            var response = http.responseText;
+            if(response.length != 0) {
+                document.getElementById('status').innerHTML = response;
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Referensi -->
+    <!-- http://rajshekhar.net/blog/archives/85-Rasmus-30-second-AJAX-Tutorial.html -->
+    <h1>Web Interaktif dgn AJAX</h1>
+    <form>
+        <p><input type="text" name="username" id="username"> Username</p>
+        <p><input type="password" name="paswd" id="paswd"> Password</p>
+        <p><input type="button" value="Login" onclick="javascript:sndReq()"></p>
+    </form>
+    <div id="status">
+    </div>
+</body>
+</html>

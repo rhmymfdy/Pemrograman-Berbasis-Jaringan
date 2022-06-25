@@ -1,0 +1,9 @@
+{%
+username = _POST['username']
+paswd = _POST['paswd']
+
+if(username=='asu' and paswd=='asu'):
+    emit('Login Sukses')
+else:
+    emit('Login Gagal!!')
+%}
